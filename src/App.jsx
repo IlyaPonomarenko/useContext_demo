@@ -1,13 +1,16 @@
 import CompA from "./CompA";
 import "./App.css";
+import { GlobalContextProvider } from "./GlobalContext";
 
 function App() {
   return (
-    <>
-      <div className="App-header">
-        <CompA />
-      </div>
-    </>
+    <GlobalContextProvider>
+      <>
+        <div className="App-header">
+          <CompA />
+        </div>
+      </>
+    </GlobalContextProvider>
   );
 }
 
